@@ -1,0 +1,36 @@
+| Field                     | Definition                                                                 |
+|---------------------------|----------------------------------------------------------------------------|
+| AccountingPeriod          | Reporting cutoff date for the data snapshot                                |
+| Program                   | Insurance program name                                                     |
+| SubProgram                | Sub-category of the program (if applicable)                                |
+| Policy                    | Unique identifier for the insurance policy                                 |
+| PolicyHolderName          | Name of the insured individual or entity                                   |
+| PolicyEffective           | Policy start date                                                          |
+| PolicyExpiration          | Policy end date                                                            |
+| PolicyCancellation        | Date the policy was canceled (if applicable)                               |
+| PolicyReinstatement       | Date the policy was reinstated after cancellation                          |
+| PolicyStatus              | Current status of the policy (e.g., Active, Expired, Cancelled)            |
+| Address                   | Primary address of the policyholder                                        |
+| City                      | City of the policyholder                                                   |
+| State                     | State of the policyholder                                                  |
+| County                    | County of the policyholder                                                 |
+| Zip                       | ZIP or postal code of the policyholder                                     |
+| Teritorry                 | Rating territory used for underwriting or pricing                          |
+| BoatStoredAtHomeAddress   | Indicates if the boat is stored at the policyholder’s address (TRUE/FALSE) |
+| BoatStoredAddress         | Address where the boat is stored                                           |
+| BoatStoredCity            | City where the boat is stored                                              |
+| BoatStoredState           | State where the boat is stored                                             |
+| BoatStoredCounty          | County where the boat is stored                                            |
+| BoatStoredZip             | ZIP or postal code where the boat is stored                                |
+| RiskNum                   | Unique identifier for each insured boat under a policy                     |
+| BoatYearBuilt             | Year the boat was manufactured                                             |
+| BoatModel                 | Manufacturer and model description of the boat                             |
+| VehicleSubType            | Type or category of boat (e.g., Fishing, Yacht)                            |
+| HullConstruction          | Material used to build the hull                                            |
+| MotorType                 | Type of engine                                                             |
+| HorsePower                | Engine horsepower rating                                                   |
+| BoatLength                | Length of the boat (typically in feet)                                     |
+| HullID                    | Unique identifier for the boat                                             |
+| FuelType                  | Type of fuel used                                                          |
+| IncludesTrailer           | Indicates if a trailer is included in coverage (TRUE/FALSE)                |
+| InsuredValue              | Declared value of the boat for insurance coverage                          |
