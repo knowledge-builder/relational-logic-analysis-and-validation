@@ -74,9 +74,41 @@ Apply across all records with the same Policy:
 - BoatLength > 0		
 - InsuredValue > 0		
 
+8. Field Dependency Rules
+-------------------------
+- MotorType not null → HorsePower not null			
+- IncludesTrailer = TRUE or FALSE only (no nulls expected)			
+- FuelType should be valid for MotorType (if reference list exists)			
 
+9. Location Completeness Rules
+------------------------------
+- State must be a valid state code		
+- Zip must follow valid ZIP format		
+- City should not be null if State is populated
 
+10. Data Completeness (Critical Fields)
+---------------------------------------
+			
+These fields should not be null:			
+- Policy			
+- RiskNum			
+- PolicyEffective			
+- PolicyExpiration			
+- PolicyStatus			
+- BoatYearBuilt			
+- BoatModel			
+- HullID			
+- InsuredValue			
+			
+11. Duplicate Detection Rules
+-----------------------------
+- No duplicate records for same Policy + RiskNum			
+- No duplicate HullID within same Policy	
 
+12. Temporal Consistency
+------------------------
+- AccountingPeriod ≥ PolicyEffective (generally expected)			
+- If PolicyStatus = Expired → AccountingPeriod should be after expiration			
 
 
 
