@@ -1,0 +1,2 @@
+# relational-logic-analysis-and-validation
+A framework for validating datasets using relational logic. Ensures consistency, integrity, and correctness across related records, detecting duplicates, mismatches, and rule violations to improve data quality and reliability
