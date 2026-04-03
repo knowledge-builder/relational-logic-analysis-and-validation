@@ -5,11 +5,9 @@ import orchestrator
 import importlib
 importlib.reload(orchestrator)
 
-# Step 3: Import the updated class or function from the reloaded module
+# Step 3: Import the updated class
 from orchestrator import Run
 
-# Step 4: Use the class as usual
+# Step 4: Run the pipeline (MAIN ENTRY POINT)
 orchestrate = Run()
-df = orchestrate.file_upload()
-date_validation = orchestrate.validate_date()
-key_validation = orchestrate.validate_key()
+orchestrate.run()
