@@ -29,6 +29,26 @@ class Run:
         self.valid_key = modules["valid_key"]
         self.valid_date = modules["valid_date"]
 
+    def run(self):
+        # Step 1: Upload
+        result = self.file_upload()
+        if not result:
+            return  # 🚫 STOP ENTIRE PIPELINE
+
+        # Step 2: Date validation
+        exec_success, valid_date = self.validate_date()
+        if not exec_success:
+            return  # 🚫 STOP if function itself failed
+        if not valid_date:
+            print("Invalid reporting date.")
+            return  # 🚫 STOP if validation failed
+
+        # Step 3: Primary key validation
+        if not self.validate_key():
+            return  # 🚫 STOP if key validation failed
+
+        print("✅ Pipeline completed successfully")
+
     def file_upload(self):
 
         self.df, self.filename = self.load()
